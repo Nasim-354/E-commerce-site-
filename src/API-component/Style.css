@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.parentDiv {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(auto, 1fr));
+}
+.childDiv {
+  margin: 1rem;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+  background-color: #554e4e;
+  border: 2px solid rgb(96, 151, 96);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.childDiv img {
+  transition: all 0.3s;
+  display: block;
+  margin: 0 auto;
+}
+.childDiv img:hover {
+  transform: scale(1.2);
+}
+
+/*  discount style */
+.discount {
+  position: relative;
+}
+.discount p {
+  position: absolute;
+  right: 10px;
+  top: -45px;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(219, 93, 93);
+}
+section .btn {
+  position: absolute;
+  text-align: center;
+  margin: 0.5rem 0 0 0;
+  bottom: 10px;
+  right: 10px;
+}
+section button {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #00573a;
+  border: none;
+  outline: none;
+  transition: all 0.3s;
+  border-radius: 5px;
+}
+section button:hover {
+  background-color: #019161;
+  border: 2px solid #00573a;
+}
+
+/* media query  */
+
+@media only screen and (max-width: 720px) {
+  .parentDiv {
+    grid-template-columns: repeat(1, minmax(auto, 1fr));
+  }
+}
+
+@media only screen and (min-width: 720px) and (max-width: 1200px) {
+  .parentDiv {
+    grid-template-columns: repeat(2, minmax(auto, 1fr));
+  }
+}
+@media only screen and(min-width:1200px) {
+  .parentDiv {
+    grid-template-columns: repeat(4, minmax(auto, 1fr));
+  }
+  .childDiv img {
+    transition: all 0.3s;
+    display:block;
+    margin: 0 auto;
+   
+  }
+  .childDiv img:hover {
+    transform: scale(1.2);
+  }
+}
